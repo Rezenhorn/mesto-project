@@ -1,0 +1,19 @@
+.page__container {
+  max-width: 880px;
+  min-width: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .page__container {
+    margin: 0px calc(72px - (1023px - 100vw) * 53 / 256) 0 calc(72px - (1023px - 100vw) * 53 / 256);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .page__container {
+    margin: 0;
+  }
+}
