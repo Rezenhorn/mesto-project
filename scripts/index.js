@@ -1,9 +1,9 @@
 let popup = document.querySelector('.popup');
 let editButton = document.querySelector('.profile__edit-button');
 let closeButton = document.querySelector('.popup__close-button');
-let formElement = document.querySelector('.popup__edit-form');
-let nameInput = document.querySelector('#input-name');
-let bioInput = document.querySelector('#input-bio');
+let formElement = document.querySelector('.edit-form');
+let nameInput = document.querySelector('.edit-form__form-item_profile_name');
+let bioInput = document.querySelector('.edit-form__form-item_profile_bio');
 let profileName = document.querySelector('.profile__name');
 let profileBio = document.querySelector('.profile__bio');
 

@@ -15,18 +15,16 @@
     <main>
       <section class="profile">
         <div class="profile__info-section">
-          <div class="profile__image-container">
-            <img src="./images/avatar_cousteau.jpg" class="profile__avatar" alt="Аватар автора">
-          </div>
-          <div class="profile__profile-info">
+          <img src="./images/avatar_cousteau.jpg" class="profile__avatar" alt="Аватар автора">
+          <div class="profile__info">
             <div class="profile__name-container">
               <h1 class="profile__name">Жак-Ив Кусто</h1>
-              <button class="profile__edit-button"></button>
+              <button class="profile__edit-button" type="button"></button>
             </div>
             <h3 class="profile__bio">Исследователь океана</h3>
           </div>
         </div>
-        <button class="profile__add-button"></button>
+        <button class="profile__add-button" type="button"></button>
       </section>
 
       <section class="cards-grid">
@@ -36,7 +34,7 @@
           </div>
           <div class="card__sign">
             <h2 class="card__heading">Карелия</h2>
-            <button class="card__like-button"></button>
+            <button class="card__like-button" type="button"></button>
           </div>
         </article>
         <article class="card">
@@ -45,7 +43,7 @@
           </div>
           <div class="card__sign">
             <h2 class="card__heading">Иваново</h2>
-            <button class="card__like-button"></button>
+            <button class="card__like-button" type="button"></button>
           </div>
         </article>
         <article class="card">
@@ -54,7 +52,7 @@
           </div>
           <div class="card__sign">
             <h2 class="card__heading">Плёс</h2>
-            <button class="card__like-button"></button>
+            <button class="card__like-button" type="button"></button>
           </div>
         </article>
         <article class="card">
@@ -63,7 +61,7 @@
           </div>
           <div class="card__sign">
             <h2 class="card__heading">Санкт-Петербург</h2>
-            <button class="card__like-button"></button>
+            <button class="card__like-button" type="button"></button>
           </div>
         </article>
         <article class="card">
@@ -72,7 +70,7 @@
           </div>
           <div class="card__sign">
             <h2 class="card__heading">Калининград</h2>
-            <button class="card__like-button"></button>
+            <button class="card__like-button" type="button"></button>
           </div>
         </article>
         <article class="card">
@@ -81,7 +79,7 @@
           </div>
           <div class="card__sign">
             <h2 class="card__heading">Кольский полуостров</h2>
-            <button class="card__like-button"></button>
+            <button class="card__like-button" type="button"></button>
           </div>
         </article>
       </section>
@@ -92,17 +90,17 @@
   </div>
   <section class="popup">
     <div class="popup__container">
-      <button class="popup__close-button"></button>
-      <form class="popup__edit-form">
-        <h2 class="popup__form-heading">Редактировать профиль</h2>
-        <fieldset class="popup__input-container">
-          <input type="text" id="input-name" class="popup__form-item" value="1">
-          <input type="text" id="input-bio" class="popup__form-item">
+      <button class="popup__close-button" type="button"></button>
+      <form class="edit-form" name="">
+        <h2 class="edit-form__heading">Редактировать профиль</h2>
+        <fieldset class="edit-form__input-container">
+          <input type="text" class="edit-form__form-item edit-form__form-item_profile_name">
+          <input type="text" class="edit-form__form-item edit-form__form-item_profile_bio">
         </fieldset>
-        <input type="submit" class="popup__form-button" value="Сохранить">
+        <button type="submit" class="edit-form__save-button">Сохранить</button>
       </form>
     </div>
   </section>
-  <script src="./scripts/script.js"></script>
+  <script src="./scripts/index.js"></script>
 </body>
 </html>
