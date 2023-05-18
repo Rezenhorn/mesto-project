@@ -26,57 +26,44 @@
         </div>
         <button class="profile__add-button" type="button"></button>
       </section>
-
       <section class="cards-grid">
         <article class="card">
-          <div>
-            <img src="./images/karelia.jpg" class="card__image" alt="Карелия">
-          </div>
+          <img src="./images/karelia.jpg" class="card__image" alt="Карелия">
           <div class="card__sign">
             <h2 class="card__heading">Карелия</h2>
             <button class="card__like-button" type="button"></button>
           </div>
         </article>
         <article class="card">
-          <div>
-            <img src="./images/ivanovo.jpg" class="card__image" alt="Иваново">
-          </div>
+          <img src="./images/ivanovo.jpg" class="card__image" alt="Иваново">
           <div class="card__sign">
             <h2 class="card__heading">Иваново</h2>
             <button class="card__like-button" type="button"></button>
           </div>
         </article>
         <article class="card">
-          <div>
-            <img src="./images/ples.jpg" class="card__image" alt="Плёс">
-          </div>
+          <img src="./images/ples.jpg" class="card__image" alt="Плёс">
           <div class="card__sign">
             <h2 class="card__heading">Плёс</h2>
             <button class="card__like-button" type="button"></button>
           </div>
         </article>
         <article class="card">
-          <div>
-            <img src="./images/spb.jpg" class="card__image" alt="Санкт-Петербург">
-          </div>
+          <img src="./images/spb.jpg" class="card__image" alt="Санкт-Петербург">
           <div class="card__sign">
             <h2 class="card__heading">Санкт-Петербург</h2>
             <button class="card__like-button" type="button"></button>
           </div>
         </article>
         <article class="card">
-          <div>
-            <img src="./images/kaliningrad.jpg" class="card__image" alt="Калининград">
-          </div>
+          <img src="./images/kaliningrad.jpg" class="card__image" alt="Калининград">
           <div class="card__sign">
             <h2 class="card__heading">Калининград</h2>
             <button class="card__like-button" type="button"></button>
           </div>
         </article>
         <article class="card">
-          <div>
-            <img src="./images/kolsky.jpg" class="card__image" alt="Лапландский заповедник">
-          </div>
+          <img src="./images/kolsky.jpg" class="card__image" alt="Лапландский заповедник">
           <div class="card__sign">
             <h2 class="card__heading">Кольский полуостров</h2>
             <button class="card__like-button" type="button"></button>
@@ -84,6 +71,7 @@
         </article>
       </section>
     </main>
+
     <footer class="footer">
       <p class="footer__copyright">&copy; 2023 Mesto Russia</p>
     </footer>
@@ -94,8 +82,10 @@
       <form class="edit-form" name="edit-form">
         <h2 class="edit-form__heading">Редактировать профиль</h2>
         <fieldset class="edit-form__input-container">
-          <input type="text" class="edit-form__form-item edit-form__form-item_profile_name" name="name" id="name">
-          <input type="text" class="edit-form__form-item edit-form__form-item_profile_bio" name="bio" id="bio">
+          <input type="text" class="edit-form__form-item edit-form__form-item_profile_name"
+          name="name" id="name" placeholder="Ваше имя">
+          <input type="text" class="edit-form__form-item edit-form__form-item_profile_bio"
+          name="bio" id="bio" placeholder="Информация о вас">
         </fieldset>
         <button type="submit" class="edit-form__save-button">Сохранить</button>
       </form>
