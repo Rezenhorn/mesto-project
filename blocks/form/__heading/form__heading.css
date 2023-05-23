@@ -1,4 +1,4 @@
-.edit-form__heading {
+.form__heading {
   font-style: normal;
   font-weight: 900;
   font-size: 24px;
@@ -10,7 +10,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  .edit-form__heading {
+  .form__heading {
     font-size: 18px;
     line-height: 22px;
     margin-bottom: 70px;

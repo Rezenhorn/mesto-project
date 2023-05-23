@@ -26,49 +26,8 @@
         </div>
         <button class="profile__add-button" type="button"></button>
       </section>
+
       <section class="cards-grid">
-        <article class="card">
-          <img src="./images/karelia.jpg" class="card__image" alt="Карелия">
-          <div class="card__sign">
-            <h2 class="card__heading">Карелия</h2>
-            <button class="card__like-button" type="button"></button>
-          </div>
-        </article>
-        <article class="card">
-          <img src="./images/ivanovo.jpg" class="card__image" alt="Иваново">
-          <div class="card__sign">
-            <h2 class="card__heading">Иваново</h2>
-            <button class="card__like-button" type="button"></button>
-          </div>
-        </article>
-        <article class="card">
-          <img src="./images/ples.jpg" class="card__image" alt="Плёс">
-          <div class="card__sign">
-            <h2 class="card__heading">Плёс</h2>
-            <button class="card__like-button" type="button"></button>
-          </div>
-        </article>
-        <article class="card">
-          <img src="./images/spb.jpg" class="card__image" alt="Санкт-Петербург">
-          <div class="card__sign">
-            <h2 class="card__heading">Санкт-Петербург</h2>
-            <button class="card__like-button" type="button"></button>
-          </div>
-        </article>
-        <article class="card">
-          <img src="./images/kaliningrad.jpg" class="card__image" alt="Калининград">
-          <div class="card__sign">
-            <h2 class="card__heading">Калининград</h2>
-            <button class="card__like-button" type="button"></button>
-          </div>
-        </article>
-        <article class="card">
-          <img src="./images/kolsky.jpg" class="card__image" alt="Лапландский заповедник">
-          <div class="card__sign">
-            <h2 class="card__heading">Кольский полуостров</h2>
-            <button class="card__like-button" type="button"></button>
-          </div>
-        </article>
       </section>
     </main>
 
@@ -76,21 +35,50 @@
       <p class="footer__copyright">&copy; 2023 Mesto Russia</p>
     </footer>
   </div>
-  <section class="popup">
+
+  <template id="card">
+    <article class="card">
+      <button class="card__delete-button" type="button"></button>
+      <img src="" class="card__image" alt="">
+      <div class="card__sign">
+        <h2 class="card__heading"></h2>
+        <button type="submit" class="card__like-button" type="button"></button>
+      </div>
+    </article>
+  </template>
+
+  <section class="popup popup__form_edit">
     <div class="popup__container">
-      <button class="popup__close-button" type="button"></button>
-      <form class="edit-form" name="edit-form">
-        <h2 class="edit-form__heading">Редактировать профиль</h2>
-        <fieldset class="edit-form__input-container">
-          <input type="text" class="edit-form__form-item edit-form__form-item_profile_name"
-          name="name" id="name" placeholder="Ваше имя">
-          <input type="text" class="edit-form__form-item edit-form__form-item_profile_bio"
-          name="bio" id="bio" placeholder="Информация о вас">
+      <button class="popup__close-button popup__close-edit" type="button"></button>
+      <form class="form form__form_edit" name="edit-form">
+        <h2 class="form__heading">Редактировать профиль</h2>
+        <fieldset class="form__input-container">
+          <input type="text" class="form__form-item form__form-item_profile_name"
+          name="profile-name" id="profile-name" placeholder="Ваше имя">
+          <input type="text" class="form__form-item form__form-item_profile_bio"
+          name="profile-bio" id="profile-bio" placeholder="Информация о вас">
         </fieldset>
-        <button type="submit" class="edit-form__save-button">Сохранить</button>
+        <button type="submit" class="form__save-button">Сохранить</button>
       </form>
     </div>
   </section>
+
+  <section class="popup popup__form_add">
+    <div class="popup__container">
+      <button class="popup__close-button popup__close-add" type="button"></button>
+      <form class="form form__form_add" name="add-form">
+        <h2 class="form__heading">Новое место</h2>
+        <fieldset class="form__input-container">
+          <input type="text" class="form__form-item form__form-item_place_name"
+          name="place-name" id="place-name" placeholder="Название">
+          <input type="text" class="form__form-item form__form-item_place_link"
+          name="place-link" id="place-link" placeholder="Ссылка на картинку">
+        </fieldset>
+        <button type="submit" class="form__save-button">Создать</button>
+      </form>
+    </div>
+  </section>
+
   <script src="./scripts/index.js"></script>
 </body>
 </html>
