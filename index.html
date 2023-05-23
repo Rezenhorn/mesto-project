@@ -39,17 +39,17 @@
   <template id="card">
     <article class="card">
       <button class="card__delete-button" type="button"></button>
-      <img src="" class="card__image" alt="">
+      <img src="#" class="card__image" alt="Изображение">
       <div class="card__sign">
         <h2 class="card__heading"></h2>
-        <button type="submit" class="card__like-button" type="button"></button>
+        <button class="card__like-button" type="button"></button>
       </div>
     </article>
   </template>
 
   <section class="popup popup__form_edit">
     <div class="popup__container">
-      <button class="popup__close-button popup__close-edit" type="button"></button>
+      <button class="popup__close-button" type="button"></button>
       <form class="form form__form_edit" name="edit-form">
         <h2 class="form__heading">Редактировать профиль</h2>
         <fieldset class="form__input-container">
@@ -65,7 +65,7 @@
 
   <section class="popup popup__form_add">
     <div class="popup__container">
-      <button class="popup__close-button popup__close-add" type="button"></button>
+      <button class="popup__close-button" type="button"></button>
       <form class="form form__form_add" name="add-form">
         <h2 class="form__heading">Новое место</h2>
         <fieldset class="form__input-container">
@@ -79,6 +79,17 @@
     </div>
   </section>
 
+  <section class="popup popup__image">
+    <div class="popup__image-container">
+      <button class="popup__close-button" type="button"></button>
+      <figure class="figure">
+        <img class="figure__image" src="#" alt="Изображение">
+        <figcaption class="figure__figcaption"></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <script src="./scripts/constants.js"></script>
   <script src="./scripts/index.js"></script>
 </body>
 </html>
