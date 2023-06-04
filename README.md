@@ -1,7 +1,10 @@
 # Проект "Mesto"
+
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+
 ## Описание
 
-Проект сервиса Mesto: интерактивная страница, куда можно добавлять карточки с фотографиями, удалять их и ставить лайки.
+Проект сервиса Mesto: интерактивная страница, куда можно добавлять карточки с фотографиями, удалять их и ставить лайки. Верстка выполнена адаптивно, формы имеют лайв-валидацию.
 
 ## Используемые технологии
 
@@ -16,4 +19,4 @@
 
 ## GitHub Pages
 
-Работа также выложена на GitHub Pages и доступна по ссылке: <https://rezenhorn.github.io/mesto-project/>
+Работа выложена на GitHub Pages и доступна по ссылке: <https://rezenhorn.github.io/mesto-project/>
