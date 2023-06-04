@@ -6,13 +6,13 @@
   color: black;
   margin-inline: 0;
   margin-block: 0;
-  margin-bottom: 44px;
+  margin-bottom: 47px;
 }
 
 @media screen and (max-width: 767px) {
   .form__heading {
     font-size: 18px;
     line-height: 22px;
-    margin-bottom: 70px;
+    margin-bottom: 74px;
   }
 }

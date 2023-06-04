@@ -49,13 +49,21 @@
   <section class="popup popup__form_edit">
     <div class="popup__container">
       <button class="popup__close-button" type="button"></button>
-      <form class="form" name="edit-form">
+      <form class="form" name="editForm" novalidate>
         <h2 class="form__heading">Редактировать профиль</h2>
-        <fieldset class="form__input-container">
-          <input type="text" class="form__form-item form__form-item_profile_name"
-          name="profile-name" id="profile-name" placeholder="Ваше имя">
-          <input type="text" class="form__form-item form__form-item_profile_bio"
-          name="profile-bio" id="profile-bio" placeholder="Информация о вас">
+        <fieldset class="form__fieldset">
+          <div class="form__input-container">
+            <input type="text" class="form__input" name="profileName"
+            id="profile-name" placeholder="Ваше имя" minlength=2
+            maxlength=40 required>
+            <span class="form__input-error profile-name-error"></span>
+          </div>
+          <div class="form__input-container">
+            <input type="text" class="form__input" name="profileBio"
+            id="profile-bio" placeholder="Информация о вас" minlength=2
+            maxlength=200 required>
+            <span class="form__input-error profile-bio-error"></span>
+          </div>
         </fieldset>
         <button type="submit" class="form__save-button">Сохранить</button>
       </form>
@@ -65,13 +73,20 @@
   <section class="popup popup__form_add">
     <div class="popup__container">
       <button class="popup__close-button" type="button"></button>
-      <form class="form" name="add-form">
+      <form class="form" name="addForm" novalidate>
         <h2 class="form__heading">Новое место</h2>
-        <fieldset class="form__input-container">
-          <input type="text" class="form__form-item form__form-item_place_name"
-          name="place-name" id="place-name" placeholder="Название">
-          <input type="text" class="form__form-item form__form-item_place_link"
-          name="place-link" id="place-link" placeholder="Ссылка на картинку">
+        <fieldset class="form__fieldset">
+          <div class="form__input-container">
+            <input type="text" class="form__input" name="placeName"
+            id="place-name" placeholder="Название" minlength=2
+            maxlength=30 required>
+            <span class="form__input-error place-name-error"></span>
+          </div>
+          <div class="form__input-container">
+            <input type="url" class="form__input" name="placeLink"
+            id="place-link" placeholder="Ссылка на картинку" required>
+            <span class="form__input-error place-link-error"></span>
+          </div>
         </fieldset>
         <button type="submit" class="form__save-button">Создать</button>
       </form>
@@ -90,5 +105,6 @@
 
   <script src="./scripts/constants.js"></script>
   <script src="./scripts/index.js"></script>
+  <script src="./scripts/validate.js"></script>
 </body>
 </html>

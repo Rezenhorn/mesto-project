@@ -1,10 +1,4 @@
 .form__input-container {
   display: flex;
   flex-direction: column;
-  gap: 26px;
-  border: 0;
-  margin-inline: 0;
-  margin-block: 0;
-  padding-inline: 0;
-  padding-block: 0;
 }
