@@ -4,19 +4,19 @@ const profileBio = document.querySelector('.profile__bio');
 const editProfileButton = document.querySelector('.profile__edit-button');
 const addCardButton = document.querySelector('.profile__add-button');
 // элементы editProfilePopup:
-const editProfilePopup = document.querySelector('.popup__form_edit');
+const editProfilePopup = document.querySelector('.popup_type_edit-form');
 const closeEditProfilePopupButton = editProfilePopup.querySelector('.popup__close-button');
 const editProfileForm = editProfilePopup.querySelector('.form');
 const profileNameInput = editProfileForm.elements.profileName;
 const profileBioInput = editProfileForm.elements.profileBio;
 // элементы addCardPopup:
-const addCardPopup = document.querySelector('.popup__form_add');
+const addCardPopup = document.querySelector('.popup_type_add-form');
 const closeAddCardPopupButton = addCardPopup.querySelector('.popup__close-button');
 const addCardForm = addCardPopup.querySelector('.form');
 const cardPlaceInput = addCardForm.elements.placeName;
 const cardLinkInput = addCardForm.elements.placeLink;
 // элементы imagePopup:
-const imagePopup = document.querySelector('.popup__image');
+const imagePopup = document.querySelector('.popup_type_show-image');
 const closeImagePopupButton = imagePopup.querySelector('.popup__close-button');
 // другие элементы:
 const popupList = document.querySelectorAll('.popup');
@@ -41,9 +41,6 @@ function addCard(name, link) {
   const card = createCard(name, link);
   cardGrid.prepend(card);
 }
-
-// Заполняем грид стандартными карточками
-initialCards.forEach(element => cardGrid.append(createCard(element.name, element.link)));
 
 function resetValidation(formElement) {
   const inputList = Array.from(formElement.querySelectorAll(".form__input"));
@@ -105,6 +102,20 @@ function addDeleteCardListener(deleteButton) {
   );
 }
 
+function disableFormButton(formElement) {
+  const buttonElement = formElement.querySelector('.form__save-button');
+  buttonElement.classList.add('form__save-button_inactive');
+  buttonElement.disabled = true;
+}
+
+// Закрытие попапов по нажатию Esc
+function closePopupWithEsc(evt) {
+  if (evt.key === 'Escape') {
+    const popupActive = document.querySelector('.popup_opened');
+    closePopup(popupActive);
+  }
+}
+
 function addImageCardListener(image) {
   image.addEventListener(
     'click', () => {
@@ -125,20 +136,6 @@ popupList.forEach((popupElement) => {
   });
 });
 
-// Закрытие попапов по нажатию Esc
-function closePopupWithEsc(evt) {
-  if (evt.key === 'Escape') {
-    const popupActive = document.querySelector('.popup_opened');
-    closePopup(popupActive);
-  }
-}
-
-function disableFormButton(formElement) {
-  const buttonElement = formElement.querySelector('.form__save-button');
-  buttonElement.classList.add('form__save-button_inactive');
-  buttonElement.disabled = true;
-}
-
 addCardButton.addEventListener('click', openAddCardPopup);
 editProfileButton.addEventListener('click', openEditProfilePopup);
 closeAddCardPopupButton.addEventListener('click', () => closePopup(addCardPopup));
@@ -146,3 +143,6 @@ closeEditProfilePopupButton.addEventListener('click', () => closePopup(editProfi
 closeImagePopupButton.addEventListener('click', () => closePopup(imagePopup));
 editProfileForm.addEventListener('submit', handleEditFormSubmit);
 addCardForm.addEventListener('submit', handleAddFormSubmit);
+
+// Заполняем грид стандартными карточками
+initialCards.forEach(element => cardGrid.append(createCard(element.name, element.link)));
